@@ -1,18 +1,6 @@
 #!/usr/bin/env python3
-"""
-Student Grade Checker Program with A+ grade support (95+)
-"""
 
 def get_grade(score):
-    """
-    Determine grade based on score
-    A+ = 95+
-    A = 90-94
-    B = 80-89
-    C = 70-79
-    D = 60-69
-    F = Below 60
-    """
     if score >= 95:
         return 'A+'
     elif score >= 90:
@@ -27,7 +15,6 @@ def get_grade(score):
         return 'F'
 
 def get_grade_description(grade):
-    """Get description for the grade"""
     descriptions = {
         'A+': 'Excellent - Outstanding performance',
         'A': 'Excellent - Very Good performance',
@@ -39,7 +26,6 @@ def get_grade_description(grade):
     return descriptions.get(grade, 'Unknown grade')
 
 def display_menu():
-    """Display the menu"""
     print("\n" + "="*50)
     print("       STUDENT GRADE CHECKER PROGRAM")
     print("="*50)
@@ -50,7 +36,6 @@ def display_menu():
     print("="*50)
 
 def show_grade_scale():
-    """Display the grading scale"""
     print("\n" + "-"*50)
     print("GRADING SCALE:")
     print("-"*50)
@@ -63,7 +48,6 @@ def show_grade_scale():
     print("-"*50 + "\n")
 
 def main():
-    """Main function to run the grade checker"""
     while True:
         display_menu()
         choice = input("Enter your choice (1/2/3/4): ")
@@ -111,7 +95,6 @@ def main():
                     else:
                         print("Invalid score! Skipping this student.")
                 
-                # Display results
                 print(f"\n{'='*50}")
                 print("STUDENT GRADES SUMMARY")
                 print(f"{'='*50}")

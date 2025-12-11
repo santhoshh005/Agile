@@ -1,28 +1,20 @@
 #!/usr/bin/env python3
-"""
-Calculator Program with Addition, Subtraction, Multiplication, and Division
-"""
 
 def add(a, b):
-    """Add two numbers"""
     return a + b
 
 def subtract(a, b):
-    """Subtract two numbers"""
     return a - b
 
 def multiply(a, b):
-    """Multiply two numbers"""
     return a * b
 
 def divide(a, b):
-    """Divide two numbers"""
     if b == 0:
         return "Error: Division by zero is not allowed"
     return a / b
 
 def display_menu():
-    """Display the calculator menu"""
     print("\n" + "="*40)
     print("       CALCULATOR PROGRAM")
     print("="*40)
@@ -34,7 +26,6 @@ def display_menu():
     print("="*40)
 
 def main():
-    """Main function to run the calculator"""
     while True:
         display_menu()
         choice = input("Enter your choice (1/2/3/4/5): ")

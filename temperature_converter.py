@@ -1,37 +1,26 @@
 #!/usr/bin/env python3
-"""
-Temperature Converter Program
-Supports conversions between Celsius, Fahrenheit, and Kelvin
-"""
 
 def celsius_to_fahrenheit(celsius):
-    """Convert Celsius to Fahrenheit"""
     return (celsius * 9/5) + 32
 
 def fahrenheit_to_celsius(fahrenheit):
-    """Convert Fahrenheit to Celsius"""
     return (fahrenheit - 32) * 5/9
 
 def celsius_to_kelvin(celsius):
-    """Convert Celsius to Kelvin"""
     return celsius + 273.15
 
 def kelvin_to_celsius(kelvin):
-    """Convert Kelvin to Celsius"""
     return kelvin - 273.15
 
 def fahrenheit_to_kelvin(fahrenheit):
-    """Convert Fahrenheit to Kelvin"""
     celsius = fahrenheit_to_celsius(fahrenheit)
     return celsius_to_kelvin(celsius)
 
 def kelvin_to_fahrenheit(kelvin):
-    """Convert Kelvin to Fahrenheit"""
     celsius = kelvin_to_celsius(kelvin)
     return celsius_to_fahrenheit(celsius)
 
 def display_menu():
-    """Display the temperature converter menu"""
     print("\n" + "="*50)
     print("    TEMPERATURE CONVERTER PROGRAM")
     print("="*50)
@@ -46,7 +35,6 @@ def display_menu():
     print("="*50)
 
 def show_formulas():
-    """Display conversion formulas"""
     print("\n" + "-"*50)
     print("TEMPERATURE CONVERSION FORMULAS:")
     print("-"*50)
@@ -59,7 +47,6 @@ def show_formulas():
     print("-"*50 + "\n")
 
 def main():
-    """Main function to run the temperature converter"""
     while True:
         display_menu()
         choice = input("Enter your choice (1-8): ")
@@ -70,7 +57,6 @@ def main():
         
         elif choice in ['1', '2', '3', '4', '5', '6']:
             try:
-                # Get the temperature value
                 if choice == '1':
                     temp = float(input("Enter temperature in Celsius: "))
                     result = celsius_to_fahrenheit(temp)
